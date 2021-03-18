@@ -1,7 +1,16 @@
 function getColor(selection)
 {
 	switch(selection){
-		// Add more options here
+        // Add more options here
+        case "blue":
+            return true;
+        break;
+        case "green":
+            return true;
+        break;
+        case "red":
+            return true;
+        break;
 	    default:
 	    	return false;  //returns false because the user picked an unavailable color
 	    break;               
@@ -9,7 +18,7 @@ function getColor(selection)
 }
 
 var colorname = prompt('What color do you want?');
-var isAvailable = getColor(colorname);
+var isAvailable = getColor(colorname.toLocaleLowerCase());
 
 if(isAvailable)
 	console.log('Good news! That color is available');
